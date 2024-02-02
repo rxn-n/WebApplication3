@@ -1,0 +1,27 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome, @ViewData["FirstName"]!</h1>
+    <p>Your user data:</p>
+
+    <p><strong>First Name:</strong> @ViewData["FirstName"]</p>
+    <p><strong>Last Name:</strong> @ViewData["LastName"]</p>
+    <p><strong>Decrypted Credit Card:</strong> @ViewData["CreditCardNo"]</p>
+    <p><strong>Mobile Number:</strong> @ViewData["MobileNo"]</p>
+    <p><strong>Billing Address:</strong> @ViewData["BillingAddress"]</p>
+    <p><strong>Shipping Address:</strong> @ViewData["ShippingAddress"]</p>
+
+    @* @if (Model.CurrentUser.Photo != null)
+    {
+        <li>
+            <strong>Photo:</strong>
+            <img src="data:image/jpeg;base64,@Convert.ToBase64String(Model.CurrentUser.Photo)" alt="User Photo" />
+        </li>
+    } *@
+
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
